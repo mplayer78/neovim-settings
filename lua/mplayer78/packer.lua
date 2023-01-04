@@ -53,4 +53,19 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
+
+  use {
+      "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
+
+  use "terrortylor/nvim-comment"
+
+  use "tpope/vim-surround"
+
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
+  use 'leoluz/nvim-dap-go'
+
+  use 'jose-elias-alvarez/null-ls.nvim'
 end)
