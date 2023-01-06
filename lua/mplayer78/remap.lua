@@ -34,3 +34,5 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- tab navigation
 vim.keymap.set("n", "<leader>h", "tabN")
 
+-- close all other buffers
+vim.keymap.set({"n", "v", "i"}, "<C-o>", "<cmd>only<CR>")
