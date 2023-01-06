@@ -43,3 +43,11 @@ vim.keymap.set("n", "<leader>dr", dapOpenRepl)
 
 vim.keymap.set("n", "<leader>dt", dapGoDebugTest)
 vim.keymap.set("n", "<leader>dlt", dapGoDebugLastTest)
+
+require('dapui').setup()
+
+local function dapUIOpen()
+  require("dapui").open()
+end
+
+vim.keymap.set("n", "<leader>do", dapUIOpen)
