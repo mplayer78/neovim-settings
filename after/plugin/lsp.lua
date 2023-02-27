@@ -6,7 +6,7 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   'tsserver',
   'eslint',
-  'sumneko_lua',
+  'lua_ls',
   'rust_analyzer',
 })
 
@@ -63,3 +63,5 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true,
 })
+
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
